@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d349ba1c5c2e1ce4eb028585e9058466, type: 3}
+  m_Name: Rabbit
+  m_EditorClassIdentifier: 
+  id: 7
+  npcName: "\uD1A0\uB07C"
+  npcSprtie: {fileID: 2257614105316590348, guid: 8fecd574296c457409c4a949f2bd6269, type: 3}
+  npcScript: "Rabbit1 \uB3CC\uC785\uD569\uB2C8\uB2E4."

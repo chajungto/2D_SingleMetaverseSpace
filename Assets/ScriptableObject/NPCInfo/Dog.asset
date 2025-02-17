@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d349ba1c5c2e1ce4eb028585e9058466, type: 3}
+  m_Name: Dog
+  m_EditorClassIdentifier: 
+  id: 4
+  npcName: "\uAC15\uC544\uC9C0"
+  npcSprtie: {fileID: 7241482898796697593, guid: f3e17200ed4b61f4cbd43ae104fd4de5, type: 3}
+  npcScript: "\uAC1C\uAC00 \uC544\uB2C8\uACE0 \uAC15\uC544\uC9C0 \uC785\uB2C8\uB2E4"

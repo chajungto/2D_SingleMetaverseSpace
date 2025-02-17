@@ -4,14 +4,27 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private static GameManager instance = null;
+    //ΩÃ±€≈Ê
+    private static GameManager instance;
 
-    [SerializeField]
-    private string playerName = "";
+    //ΩÃ±€≈Ê «¡∑Œ∆€∆º
+    public static GameManager Instance
+    {
+        get
+        {
+            if (null == instance)
+            {
+                return null;
+            }
+            return instance;
+        }
+    }
 
+    //¥Î»≠ ∞°¥… ø©∫Œ
+    public bool isAbleToTalk = false;
 
-    [SerializeField]
-    private GameObject nameInputField;
+    //panel ∏ÆΩ∫∆Æ
+    public List<GameObject> npcPanel = new List<GameObject>();
 
     private void Awake()
     {
@@ -26,10 +39,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Start()
+    void Start()
     {
         
     }
 
-
+    void Update()
+    {
+        
+    }
 }
