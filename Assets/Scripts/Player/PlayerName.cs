@@ -8,11 +8,11 @@ using UnityEngine.UI;
 public class PlayerName : MonoBehaviour
 {
     [SerializeField]
-    private InputField playerNameInputField;
+    private InputField playerNameInputField;            //플레이어 이름 입력창
 
     private void Start()
     {
-        playerNameInputField.characterLimit = 8;
+        playerNameInputField.characterLimit = 8;        //8글자의 제한
     }
 
     public void DecidePlayerName()

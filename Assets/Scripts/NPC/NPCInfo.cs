@@ -4,32 +4,23 @@ using UnityEngine;
 
 public class NPCInfo : ScriptableObject
 {
-    //NPC 아이지
-    [SerializeField]
+    [SerializeField]                                            //NPC 아이디
     private int id;
 
     [SerializeField]
     public int ID { get { return id; } }
 
-    //NPC 이름
+
     [SerializeField]
-    private string npcName;
+    private string npcName;                                     //NPC 이름
 
     [SerializeField]
     public string NpcName { get { return npcName; } }
 
-    //NPC 명찰
-    [SerializeField]
+    
+    [SerializeField]                                            //NPC 명찰
     private Sprite npcSprtie;
 
     [SerializeField]
     public Sprite NpcSprtie { get { return npcSprtie; } }
-
-    //NPC 짧은 대사
-    [SerializeField]
-    private string npcScript;
-
-    [SerializeField]
-    public string NpcScript { get { return npcScript; } }
-
 }

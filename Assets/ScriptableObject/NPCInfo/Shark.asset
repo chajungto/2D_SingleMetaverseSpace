@@ -15,4 +15,4 @@ MonoBehaviour:
   id: 8
   npcName: "\uC0C1\uC5B4"
   npcSprtie: {fileID: 1358434847344583759, guid: 8f7d227fc3045b046ba41f9ff1e6c999, type: 3}
-  npcScript: "\uC8E0\uC2A4\uBC14 \uAC1C\uAFC0\uB9DB"
+  npcScriptPanel: {fileID: 633755162423290784, guid: 0bb8a952719a74d498dd689dba901265, type: 3}

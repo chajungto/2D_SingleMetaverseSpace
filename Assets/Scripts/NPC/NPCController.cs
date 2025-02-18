@@ -6,28 +6,21 @@ using UnityEngine.InputSystem;
 
 public class NPCController : MonoBehaviour
 {
-    //감지 범위
-    public float radius = 1f;
+    public float radius = 1f;           //감지 범위
 
-    //플레이어 잡을 레이어
-    public LayerMask layer;
+    public LayerMask layer;             //플레이어 잡을 레이어
 
-    //감지될 player 콜라이더
-    public Collider2D playerCollider;
+    public Collider2D playerCollider;   //감지될 player 콜라이더
 
-    //NPC가 가지고 있는 정보 스크립터블 오브젝트
-    public NPCInfo npcInfo;
+    public NPCInfo npcInfo;             //NPC가 가지고 있는 정보 스크립터블 오브젝트
 
-    //NPC 이름표
-    [SerializeField]
+    [SerializeField]                    //NPC 이름표
     private GameObject nameTag;
 
-    //말 걸기 패널
-    [SerializeField]
+    [SerializeField]                    //말 걸기 패널
     private GameObject tryTalkPanel;
 
-    //대화가 나올 UI 패널
-    [SerializeField]
+    [SerializeField]                    //대화가 나올 UI 패널
     public GameObject scriptPanel;
 
     

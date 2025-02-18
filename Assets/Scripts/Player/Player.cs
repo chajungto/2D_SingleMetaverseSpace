@@ -6,49 +6,38 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-    //플레이어 이름
     [SerializeField]
-    private GameObject playerName;
+    private GameObject playerName;          //플레이어 이름
 
-    //대체 이름
     [SerializeField]
-    private string replacedName;
+    private string replacedName;            //대체 이름
 
-    public Vector2 inputVec;        
-    public float speed;
+    public Vector2 inputVec;                //이동 벡터
 
-    Rigidbody2D rigid;
+    public float speed;                     //이동 속도
 
-    //플레이어 모델
+    Rigidbody2D rigid;                      //리지드 바디
+
     [SerializeField]
-    GameObject playerModel;
+    GameObject playerModel;                 //플레이어 모델
 
-    //모델의 애니메이터
     [SerializeField]
-    Animator animator;
+    Animator animator;                      //모델의 애니메이터
 
-    //왼쪽으로 이동중인지의 여부
     [SerializeField]
-    private bool isLeft = true;
+    public GameObject scriptPanel;           //NPC 대화 패널
 
-    //NPC 대화 패널
+    public float radius = 1f;               //감지 범위
+
+    public LayerMask layer;                 //NPC 잡을 레이어
+
+    public Collider2D npcCollider;          //감지될 NPC 콜라이더
+
     [SerializeField]
-    GameObject scriptPanel;
+    private bool isLeft = true;             //왼쪽으로 이동중인지의 여부
 
-    //움직임이 가능한지의 여부
     [SerializeField]
-    private bool isAbleToMove = true;
-
-    //감지 범위
-    public float radius = 1f;
-
-    //NPC 잡을 레이어
-    public LayerMask layer;
-
-    //감지될 NPC 콜라이더
-    public Collider2D npcCollider;
-
-
+    private bool isAbleToMove = true;        //움직임이 가능한지의 여부
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -65,8 +54,8 @@ public class Player : MonoBehaviour
         {
             playerName.GetComponent<TextMesh>().text = replacedName;
         }
-        
     }
+
 
     void Update()
     {
@@ -83,6 +72,7 @@ public class Player : MonoBehaviour
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, radius);
     }
+
 
     void FixedUpdate()
     {
@@ -139,22 +129,27 @@ public class Player : MonoBehaviour
     {
         if (GameManager.Instance.isAbleToTalk)
         {
-            for(int i = 1; i <= GameManager.Instance.npcPanel.Count; i++)
+            try
             {
-                if (npcCollider.GetComponent<NPCController>().npcInfo.ID == i)
+                for (int i = 1; i <= GameManager.Instance.npcPanel.Count; i++)
                 {
-                    scriptPanel = npcCollider.GetComponent<NPCController>().scriptPanel;
+                    if (npcCollider.GetComponent<NPCController>().npcInfo.ID == i)
+                    {
+                        
+                        scriptPanel = npcCollider.GetComponent<NPCController>().scriptPanel;
+                    }
                 }
             }
+            catch { }
             
             scriptPanel.SetActive(true);
             isAbleToMove = false;
         }
     }
 
-    //움직임 가능
+    //움직임 가능            => 여기서 각 NPC 별로 선택지가 다르므로 case 구분해 둘것
     void OnMoveAble()
-    {
+    { 
         if (GameManager.Instance.isAbleToTalk && !isAbleToMove)
         {
             scriptPanel.SetActive(false);

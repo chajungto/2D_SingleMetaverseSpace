@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    //플레이어 게임 오브젝트
     [SerializeField]
-    private GameObject player;
+    private GameObject player;                      //플레이어 게임 오브젝트
 
-    //카메라가 플레이어 따라가는 속도?
     [SerializeField]
-    private float followSpeed = 0.01f;
+    private float followSpeed = 0.01f;              //카메라가 플레이어 따라가는 속도?
 
 
     //시작 전 Tag가 Player에 해당하는 GameObject를 찾음
