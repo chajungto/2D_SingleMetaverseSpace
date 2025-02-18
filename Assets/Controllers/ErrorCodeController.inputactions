@@ -1,0 +1,34 @@
+{
+    "name": "ErrorCode",
+    "maps": [
+        {
+            "name": "ErrorCode",
+            "id": "84ccf9d7-982d-4116-8b41-f80c2aa88b5d",
+            "actions": [
+                {
+                    "name": "Remove",
+                    "type": "Button",
+                    "id": "c43a767a-6126-45e9-a940-ecc1349f8221",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "289e08ef-9df2-41e5-b42d-540323c0e7ed",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Remove",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

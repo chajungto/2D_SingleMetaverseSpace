@@ -93326,6 +93326,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4021980865072948806, guid: 269444cbef51ba94cbf521223a49b2d4, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4194573710082218981, guid: 269444cbef51ba94cbf521223a49b2d4, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -93368,7 +93372,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7978762624699444342, guid: 269444cbef51ba94cbf521223a49b2d4, type: 3}
       propertyPath: speed
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7978762624699444342, guid: 269444cbef51ba94cbf521223a49b2d4, type: 3}
       propertyPath: scriptPanel

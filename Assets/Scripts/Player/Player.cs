@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -38,6 +39,8 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private bool isAbleToMove = true;        //움직임이 가능한지의 여부
+
+
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -46,7 +49,7 @@ public class Player : MonoBehaviour
     //플레이어 이름 정하기
     void Start()
     {
-        if(PlayerPrefs.GetString("playerName") != "")
+        if (PlayerPrefs.GetString("playerName") != "")
         {
             playerName.GetComponent<TextMesh>().text = PlayerPrefs.GetString("playerName");
         }
@@ -80,7 +83,7 @@ public class Player : MonoBehaviour
         rigid.MovePosition(rigid.position + nextVec);
 
         //움직이는 애니메이션 호출
-        if(inputVec.x != 0 || inputVec.y != 0)
+        if (inputVec.x != 0 || inputVec.y != 0)
         {
             animator.SetBool("isWalk", true);
         }
@@ -107,7 +110,7 @@ public class Player : MonoBehaviour
             isLeft = false;
             playerModel.transform.rotation = Quaternion.Euler(0, 180, 0);
         }
-        else if(inputVec.x < 0)
+        else if (inputVec.x < 0)
         {
             isLeft = true;
             playerModel.transform.rotation = Quaternion.Euler(0, 0, 0);
@@ -118,7 +121,7 @@ public class Player : MonoBehaviour
     //이동
     void OnMove(InputValue value)
     {
-        if(isAbleToMove)
+        if (isAbleToMove)
         {
             inputVec = value.Get<Vector2>();
         }
@@ -135,21 +138,60 @@ public class Player : MonoBehaviour
                 {
                     if (npcCollider.GetComponent<NPCController>().npcInfo.ID == i)
                     {
-                        
+
                         scriptPanel = npcCollider.GetComponent<NPCController>().scriptPanel;
                     }
                 }
             }
             catch { }
-            
+
             scriptPanel.SetActive(true);
             isAbleToMove = false;
         }
     }
 
+    void OnMoveGameScene()
+    {
+        if (GameManager.Instance.isAbleToTalk && !isAbleToMove)
+        {
+            scriptPanel.SetActive(false);
+            isAbleToMove = true;
+        }
+
+        switch (npcCollider.GetComponent<NPCController>().npcInfo.ID)
+        {
+            case 1:
+                SceneManager.LoadScene("GameScene");
+                break;
+            case 2:
+                SceneManager.LoadScene("GameScene");
+                break;
+            case 3:
+                SceneManager.LoadScene("GameScene");
+                break;
+            case 4:
+                SceneManager.LoadScene("GameScene");
+                break;
+            case 5:
+                SceneManager.LoadScene("GameScene");
+                break;
+            case 6:
+                SceneManager.LoadScene("GameScene");
+                break;
+            case 7:
+                SceneManager.LoadScene("GameScene");
+                break;
+            case 8:
+                SceneManager.LoadScene("GameScene");
+                break;
+            default: break;
+        }
+    }
+
+
     //움직임 가능            => 여기서 각 NPC 별로 선택지가 다르므로 case 구분해 둘것
     void OnMoveAble()
-    { 
+    {
         if (GameManager.Instance.isAbleToTalk && !isAbleToMove)
         {
             scriptPanel.SetActive(false);

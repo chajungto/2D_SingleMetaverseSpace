@@ -1,0 +1,56 @@
+{
+    "name": "BreakPointController",
+    "maps": [
+        {
+            "name": "BreakPoint",
+            "id": "dca1d817-13c4-45cd-9e31-f3c0f26b8f20",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "aaaaac3e-8614-4f6a-b486-19391cc5be8c",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "2D Vector",
+                    "id": "6b4b1f11-b0ca-4ca7-8608-4e592f4c98cb",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "66dfd140-bf7c-48a0-9a11-ef051d8c2ceb",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "43153a1e-4a53-4a73-b7e2-c5d737038ade",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

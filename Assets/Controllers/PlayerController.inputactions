@@ -24,6 +24,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "MoveGameScene",
+                    "type": "Button",
+                    "id": "58aa9752-9fd7-4c7d-ab10-9ef218d363b1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "MoveAble",
                     "type": "Button",
                     "id": "71afa67f-7850-4eaa-9d22-62a3f88614eb",
@@ -103,11 +112,22 @@
                 {
                     "name": "",
                     "id": "9074f1a7-7e49-45c7-9d60-0b05efdcc8a4",
-                    "path": "<Keyboard>/1",
+                    "path": "<Keyboard>/2",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "MoveAble",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a0794cdb-8a54-44d6-87c3-f9fb22245a79",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveGameScene",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
