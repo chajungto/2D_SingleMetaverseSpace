@@ -1,0 +1,45 @@
+{
+    "name": "BirdController",
+    "maps": [
+        {
+            "name": "Bird",
+            "id": "60b432fc-4c51-4ae7-b2d4-b25aef0754e8",
+            "actions": [
+                {
+                    "name": "Flap",
+                    "type": "Button",
+                    "id": "928d532f-1814-4c12-8c80-d821667148f0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e20f04d2-e6dc-4bbe-8aee-bb2702c9edf4",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Flap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f223881d-adfa-4f01-824c-8b17b3b5ce98",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Flap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
