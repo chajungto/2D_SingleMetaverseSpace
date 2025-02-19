@@ -14451,6 +14451,8 @@ MonoBehaviour:
   EndPanel: {fileID: 2108830606}
   DescriptionPanel: {fileID: 1202510083}
   score: 0
+  flappyStartPanel: {fileID: 0}
+  flappyEndPanel: {fileID: 0}
   errorCodes:
   - {fileID: 918556644213153056, guid: 3ce0fbbf772d6d247ac7ebf738b4f9e4, type: 3}
   - {fileID: 2279134399904643155, guid: 983dda6fc280a9a448b119cfba24b5d2, type: 3}
@@ -14458,7 +14460,7 @@ MonoBehaviour:
   currentTime: 0
   routine: 1.5
   routineTime: 0
-  limitTime: 1
+  limitTime: 60
   TimeTxt: {fileID: 1000201840}
   ScoreTxt: {fileID: 322189765}
   FinalScoreTxt: {fileID: 677165946}

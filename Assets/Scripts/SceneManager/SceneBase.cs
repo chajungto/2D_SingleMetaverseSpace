@@ -19,4 +19,11 @@ public class SceneBase : MonoBehaviour
     public GameObject DescriptionPanel;         //설명 패널
 
     public int score = 0;                           //점수
+
+
+    //Flappy
+    public GameObject flappyStartPanel;
+
+    public GameObject flappyEndPanel;
+
 }

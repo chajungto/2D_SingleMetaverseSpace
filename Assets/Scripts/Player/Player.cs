@@ -177,16 +177,16 @@ public class Player : MonoBehaviour
                 SceneManager.LoadScene("FindErrorGameScene");
                 break;
             case 5:
-                SceneManager.LoadScene("FindErrorGameScene");
+                SceneManager.LoadScene("FlappyBirdGameScene");
                 break;
             case 6:
-                SceneManager.LoadScene("FindErrorGameScene");
+                SceneManager.LoadScene("FlappyBirdGameScene");
                 break;
             case 7:
-                SceneManager.LoadScene("FindErrorGameScene");
+                SceneManager.LoadScene("FlappyBirdGameScene");
                 break;
             case 8:
-                SceneManager.LoadScene("FindErrorGameScene");
+                SceneManager.LoadScene("FlappyBirdGameScene");
                 break;
             default: break;
         }

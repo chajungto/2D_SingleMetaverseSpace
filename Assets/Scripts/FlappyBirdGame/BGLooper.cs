@@ -12,7 +12,7 @@ public class BGLooper : MonoBehaviour
     public int blockCount = 17;
 
     //배경 카운트
-    public int numBgCount = 10;
+    public int numBgCount = 5;
 
     public Vector3 obstacleLastPosition = Vector3.zero;
 

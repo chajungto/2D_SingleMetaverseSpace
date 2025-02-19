@@ -82,6 +82,9 @@ public class Bird : MonoBehaviour
             return;
         }
         isDead = true;
+        GameManager.Instance.currentScene.flappyEndPanel.SetActive(true);
+        Time.timeScale = 0f;
+
     }
 
 
