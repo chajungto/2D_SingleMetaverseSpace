@@ -125,6 +125,10 @@ public class Player : MonoBehaviour
         {
             inputVec = value.Get<Vector2>();
         }
+        else
+        {
+            inputVec = new Vector2(0,0);
+        }
     }
 
     //¥Î»≠
