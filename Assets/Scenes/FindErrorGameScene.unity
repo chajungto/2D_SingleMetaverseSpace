@@ -8515,6 +8515,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 448021469}
   m_CullTransparentMesh: 1
+--- !u!1 &480666544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 480666546}
+  - component: {fileID: 480666545}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &480666545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480666544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e732e8b9c31edd4ead9b5d7d3afeb3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentScene: {fileID: 0}
+--- !u!4 &480666546
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480666544}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 753.6534, y: 616.0999, z: -4.8872933}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &575864744
 GameObject:
   m_ObjectHideFlags: 0
@@ -14400,6 +14445,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c3e8987e52dc54fa6a170a4971d3c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isAbleToTalk: 0
+  npcPanel: []
+  StartPanel: {fileID: 1618149458}
+  EndPanel: {fileID: 2108830606}
+  DescriptionPanel: {fileID: 1202510083}
+  score: 0
   errorCodes:
   - {fileID: 918556644213153056, guid: 3ce0fbbf772d6d247ac7ebf738b4f9e4, type: 3}
   - {fileID: 2279134399904643155, guid: 983dda6fc280a9a448b119cfba24b5d2, type: 3}
@@ -14407,15 +14458,11 @@ MonoBehaviour:
   currentTime: 0
   routine: 1.5
   routineTime: 0
-  limitTime: 60
+  limitTime: 1
   TimeTxt: {fileID: 1000201840}
   ScoreTxt: {fileID: 322189765}
   FinalScoreTxt: {fileID: 677165946}
   BestScoreTxt: {fileID: 673222647}
-  score: 0
-  StartPanel: {fileID: 1618149458}
-  EndPanel: {fileID: 2108830606}
-  DescriptionPanel: {fileID: 1202510083}
 --- !u!1 &1593427018
 GameObject:
   m_ObjectHideFlags: 0
@@ -15280,5 +15327,6 @@ SceneRoots:
   - {fileID: 691311358}
   - {fileID: 315807688}
   - {fileID: 889834794}
-  - {fileID: 1520545899}
   - {fileID: 669937665}
+  - {fileID: 1520545899}
+  - {fileID: 480666546}

@@ -201,6 +201,50 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
+--- !u!1 &360443531
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 360443532}
+  - component: {fileID: 360443533}
+  m_Layer: 0
+  m_Name: StartSceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &360443532
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360443531}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 753.6534, y: 616.0999, z: -4.8872933}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &360443533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360443531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95012b9fd485c834ea2e1d9da0dae696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &493978862
 GameObject:
   m_ObjectHideFlags: 0
@@ -780,16 +824,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e732e8b9c31edd4ead9b5d7d3afeb3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAbleToTalk: 0
-  npcPanel:
-  - {fileID: 274001543462559361, guid: 0eead0ccbf2434b47ad8618bd575246d, type: 3}
-  - {fileID: 5325850763494500932, guid: 12e85d57356c2984a876d4fccb369e4e, type: 3}
-  - {fileID: 8880651888637071878, guid: 0e8dfafe7c8c21c49b629de0c5a93910, type: 3}
-  - {fileID: 424942579922031959, guid: b64ff7258a8392f49b8e727f1ed35d6f, type: 3}
-  - {fileID: 8014575564836470054, guid: 894875833c06d1b4b9eff4298857cf5a, type: 3}
-  - {fileID: 7464940399258283393, guid: 8178dcebe705f2c46be63661b90d67a3, type: 3}
-  - {fileID: 6047286053592723768, guid: 8b062874ba0270c4a904cfcba38b9e41, type: 3}
-  - {fileID: 633755162423290784, guid: 0bb8a952719a74d498dd689dba901265, type: 3}
+  currentScene: {fileID: 0}
 --- !u!4 &1190676823
 Transform:
   m_ObjectHideFlags: 0
@@ -1683,3 +1718,4 @@ SceneRoots:
   - {fileID: 1477235457}
   - {fileID: 215953994}
   - {fileID: 1190676823}
+  - {fileID: 360443532}

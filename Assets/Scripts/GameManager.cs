@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private static GameManager instance;        //ΩÃ±€≈Ê
+    public static GameManager instance;        //ΩÃ±€≈Ê
+
+    public SceneBase currentScene;              //«ˆ¿Á æ¿
 
     public static GameManager Instance          //ΩÃ±€≈Ê «¡∑Œ∆€∆º
     {
@@ -18,10 +20,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public bool isAbleToTalk = false;                               //¥Î»≠ ∞°¥… ø©∫Œ
-
-    public List<GameObject> npcPanel = new List<GameObject>();      //NPC Panel ∏ÆΩ∫∆Æ
-
     private void Awake()
     {
         if (null == instance)
@@ -33,15 +31,5 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-    }
-
-    void Start()
-    {
-        Time.timeScale = 1.0f;
-    }
-
-    void Update()
-    {
-        
     }
 }

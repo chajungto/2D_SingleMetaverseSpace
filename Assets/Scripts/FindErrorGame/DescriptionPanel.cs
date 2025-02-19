@@ -6,12 +6,12 @@ public class DescriptionPanel : MonoBehaviour
 {
     public void ClosePanel()
     {
-        FindErrorGameManager.Instance.DescriptionPanel.SetActive(false);
+        GameManager.Instance.currentScene.DescriptionPanel.SetActive(false);
     }
 
     public void OpenPanel()
     {
-        FindErrorGameManager.Instance.DescriptionPanel.SetActive(true);
+        GameManager.Instance.currentScene.DescriptionPanel.SetActive(true);
     }
     
 }

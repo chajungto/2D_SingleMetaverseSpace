@@ -25,7 +25,7 @@ public class ErrorCode : MonoBehaviour
         {
             Destroy(this.gameObject);
             Debug.Log("´­¸²");
-            FindErrorGameManager.Instance.score++;
+            GameManager.Instance.currentScene.score++;
         }
     }
 }

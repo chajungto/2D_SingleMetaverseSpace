@@ -45,7 +45,7 @@ public class NPCController : MonoBehaviour
 
         if(tryTalkPanel.activeSelf)
         {
-            GameManager.Instance.isAbleToTalk = true;
+           GameManager.Instance.currentScene.isAbleToTalk = true;
         }
 
     }

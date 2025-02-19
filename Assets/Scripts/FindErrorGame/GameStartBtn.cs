@@ -7,7 +7,7 @@ public class GameStartBtn : MonoBehaviour
     public void StartGame()
     {
         Time.timeScale = 1f;
-        FindErrorGameManager.Instance.StartPanel.SetActive(false);
+        GameManager.Instance.currentScene.StartPanel.SetActive(false);
         Debug.Log("Ω√¿€");
     }
 }

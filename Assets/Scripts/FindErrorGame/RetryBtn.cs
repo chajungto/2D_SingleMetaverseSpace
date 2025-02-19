@@ -7,6 +7,6 @@ public class RetryBtn : MonoBehaviour
 {
     public void RetryGame()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("FindErrorGameScene");
     }
 }

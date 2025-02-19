@@ -7,7 +7,7 @@ public class MoveToTownBtn : MonoBehaviour
 {
     public void MoveToTown()
     {
-        Time.timeScale = 1f;
+        Time.timeScale = 1.0f;
         SceneManager.LoadScene("MainScene");
     }
 }

@@ -130,11 +130,11 @@ public class Player : MonoBehaviour
     //대화
     void OnTalk()
     {
-        if (GameManager.Instance.isAbleToTalk)
+        if (GameManager.Instance.currentScene.isAbleToTalk)
         {
             try
             {
-                for (int i = 1; i <= GameManager.Instance.npcPanel.Count; i++)
+                for (int i = 1; i <= GameManager.Instance.currentScene.npcPanel.Count; i++)
                 {
                     if (npcCollider.GetComponent<NPCController>().npcInfo.ID == i)
                     {
@@ -152,7 +152,7 @@ public class Player : MonoBehaviour
 
     void OnMoveGameScene()
     {
-        if (GameManager.Instance.isAbleToTalk && !isAbleToMove)
+        if (GameManager.Instance.currentScene.isAbleToTalk && !isAbleToMove)
         {
             scriptPanel.SetActive(false);
             isAbleToMove = true;
@@ -161,28 +161,28 @@ public class Player : MonoBehaviour
         switch (npcCollider.GetComponent<NPCController>().npcInfo.ID)
         {
             case 1:
-                SceneManager.LoadScene("GameScene");
+                SceneManager.LoadScene("FindErrorGameScene");
                 break;
             case 2:
-                SceneManager.LoadScene("GameScene");
+                SceneManager.LoadScene("FindErrorGameScene");
                 break;
             case 3:
-                SceneManager.LoadScene("GameScene");
+                SceneManager.LoadScene("FindErrorGameScene");
                 break;
             case 4:
-                SceneManager.LoadScene("GameScene");
+                SceneManager.LoadScene("FindErrorGameScene");
                 break;
             case 5:
-                SceneManager.LoadScene("GameScene");
+                SceneManager.LoadScene("FindErrorGameScene");
                 break;
             case 6:
-                SceneManager.LoadScene("GameScene");
+                SceneManager.LoadScene("FindErrorGameScene");
                 break;
             case 7:
-                SceneManager.LoadScene("GameScene");
+                SceneManager.LoadScene("FindErrorGameScene");
                 break;
             case 8:
-                SceneManager.LoadScene("GameScene");
+                SceneManager.LoadScene("FindErrorGameScene");
                 break;
             default: break;
         }
@@ -192,7 +192,7 @@ public class Player : MonoBehaviour
     //움직임 가능            => 여기서 각 NPC 별로 선택지가 다르므로 case 구분해 둘것
     void OnMoveAble()
     {
-        if (GameManager.Instance.isAbleToTalk && !isAbleToMove)
+        if (GameManager.Instance.currentScene.isAbleToTalk && !isAbleToMove)
         {
             scriptPanel.SetActive(false);
             isAbleToMove = true;
