@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class StartScene : SceneBase
 {
-    void Start()
+    protected override void Start()
     {
         InitScene();
     }
 
-    void InitScene()
-    {
-        GameManager.Instance.currentScene = this;
-    }
 }

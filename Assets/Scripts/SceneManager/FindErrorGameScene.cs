@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class FindErrorGameScene : SceneBase
@@ -8,24 +9,24 @@ public class FindErrorGameScene : SceneBase
     [SerializeField]
     List<GameObject> errorCodes = new List<GameObject>();       //오류코드들
 
+    public GameObject StartPanel;               //시작 패널
+    public GameObject EndPanel;                 //종료 패널
+    public GameObject DescriptionPanel;         //설명 패널
+
+    public int score = 0;                           //점수
+
     public float currentTime = 0f;                  //시간
-
     public float routine = 1.5f;                    //생성주기
-
     public float routineTime = 0f;                  //생성주기 측정
-
     public float limitTime = 60f;                   //제한시간
 
     public Text TimeTxt;                            //시간 표시
-
     public Text ScoreTxt;                           //점수 표시
-
     public Text FinalScoreTxt;                      //최종점수 표시
-
     public Text BestScoreTxt;                       //최고점수 표시
 
 
-    private void Start()
+    protected override void Start()
     {
         InitScene();
         StartPanel.SetActive(true);
@@ -76,8 +77,34 @@ public class FindErrorGameScene : SceneBase
         }
     }
 
-    void InitScene()
+    //게임 시작
+    public void OnStartGame()
     {
-        GameManager.Instance.currentScene = this;
+        StartPanel.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
+    //게임 다시하기
+    public void OnRetryGame()
+    {
+        SceneManager.LoadScene("FindErrorGameScene");
+    }
+
+    //게임 나가기
+    public void OnExitGame()
+    {
+        SceneManager.LoadScene("Mainscene");
+    }
+
+    //설명 패널 보여주기
+    public void OnShowDiscription()
+    {
+        DescriptionPanel.SetActive(true);
+    }
+
+    //설명 패널 닫기
+    public void OnCloseDiscription()
+    {
+        DescriptionPanel.SetActive(false);
     }
 }

@@ -4825,9 +4825,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 426974069}
-        m_TargetAssemblyTypeName: MoveToTownBtn, Assembly-CSharp
-        m_MethodName: MoveToTown
+      - m_Target: {fileID: 631725917}
+        m_TargetAssemblyTypeName: FlappyBirdGameScene, Assembly-CSharp
+        m_MethodName: OnExitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7726,6 +7726,7 @@ MonoBehaviour:
   EndPanel: {fileID: 0}
   DescriptionPanel: {fileID: 0}
   score: 0
+  bird: {fileID: 1172143445}
   flappyStartPanel: {fileID: 991863527}
   flappyEndPanel: {fileID: 1060288400}
   playTime: 0
@@ -15510,7 +15511,6 @@ GameObject:
   - component: {fileID: 1389737808}
   - component: {fileID: 1389737807}
   - component: {fileID: 1389737806}
-  - component: {fileID: 1389737809}
   m_Layer: 5
   m_Name: RetryBtn
   m_TagString: Untagged
@@ -15582,9 +15582,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1389737809}
-        m_TargetAssemblyTypeName: RetryFlappyGame, Assembly-CSharp
-        m_MethodName: Retry
+      - m_Target: {fileID: 631725917}
+        m_TargetAssemblyTypeName: FlappyBirdGameScene, Assembly-CSharp
+        m_MethodName: OnRetryGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15632,18 +15632,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1389737804}
   m_CullTransparentMesh: 1
---- !u!114 &1389737809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1389737804}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fae16e63452daa24c9b23a62b548d47e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1413770981
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17488,9 +17476,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1520578042}
-        m_TargetAssemblyTypeName: MoveToTownBtn, Assembly-CSharp
-        m_MethodName: MoveToTown
+      - m_Target: {fileID: 631725917}
+        m_TargetAssemblyTypeName: FlappyBirdGameScene, Assembly-CSharp
+        m_MethodName: OnExitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18874,7 +18862,6 @@ GameObject:
   - component: {fileID: 1581456454}
   - component: {fileID: 1581456453}
   - component: {fileID: 1581456452}
-  - component: {fileID: 1581456455}
   m_Layer: 5
   m_Name: GameStartBtn
   m_TagString: Untagged
@@ -18946,9 +18933,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1581456455}
-        m_TargetAssemblyTypeName: StartFlappyGame, Assembly-CSharp
-        m_MethodName: StartGame
+      - m_Target: {fileID: 631725917}
+        m_TargetAssemblyTypeName: FlappyBirdGameScene, Assembly-CSharp
+        m_MethodName: OnStartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18996,18 +18983,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1581456450}
   m_CullTransparentMesh: 1
---- !u!114 &1581456455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1581456450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b26d8b8b8cc653468ca34c747dec194, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1585949876
 GameObject:
   m_ObjectHideFlags: 0

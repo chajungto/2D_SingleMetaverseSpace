@@ -7780,7 +7780,6 @@ GameObject:
   - component: {fileID: 188775484}
   - component: {fileID: 188775483}
   - component: {fileID: 188775482}
-  - component: {fileID: 188775485}
   m_Layer: 5
   m_Name: RetryBtn
   m_TagString: Untagged
@@ -7852,9 +7851,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 188775485}
-        m_TargetAssemblyTypeName: RetryBtn, Assembly-CSharp
-        m_MethodName: RetryGame
+      - m_Target: {fileID: 1520545900}
+        m_TargetAssemblyTypeName: FindErrorGameScene, Assembly-CSharp
+        m_MethodName: OnRetryGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7902,18 +7901,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 188775479}
   m_CullTransparentMesh: 1
---- !u!114 &188775485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 188775479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e297c613f95d7244586fd1c7a3e177a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &200342813
 GameObject:
   m_ObjectHideFlags: 0
@@ -8572,7 +8559,6 @@ GameObject:
   - component: {fileID: 575864748}
   - component: {fileID: 575864747}
   - component: {fileID: 575864746}
-  - component: {fileID: 575864749}
   m_Layer: 5
   m_Name: DescriptionBtn
   m_TagString: Untagged
@@ -8644,9 +8630,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 575864749}
-        m_TargetAssemblyTypeName: DescriptionPanel, Assembly-CSharp
-        m_MethodName: OpenPanel
+      - m_Target: {fileID: 1520545900}
+        m_TargetAssemblyTypeName: FindErrorGameScene, Assembly-CSharp
+        m_MethodName: OnShowDiscription
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8694,18 +8680,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 575864744}
   m_CullTransparentMesh: 1
---- !u!114 &575864749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 575864744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9741addc04779b547851f93d61f81bc0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &578290141
 GameObject:
   m_ObjectHideFlags: 0
@@ -9851,7 +9825,7 @@ GameObject:
   - component: {fileID: 673222648}
   - component: {fileID: 673222647}
   m_Layer: 5
-  m_Name: HighScore
+  m_Name: BestScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10499,7 +10473,6 @@ GameObject:
   - component: {fileID: 863473421}
   - component: {fileID: 863473420}
   - component: {fileID: 863473419}
-  - component: {fileID: 863473422}
   m_Layer: 5
   m_Name: CloseDescriptionPanelBtn
   m_TagString: Untagged
@@ -10571,9 +10544,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 863473422}
-        m_TargetAssemblyTypeName: DescriptionPanel, Assembly-CSharp
-        m_MethodName: ClosePanel
+      - m_Target: {fileID: 1520545900}
+        m_TargetAssemblyTypeName: FindErrorGameScene, Assembly-CSharp
+        m_MethodName: OnCloseDiscription
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10621,18 +10594,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 863473416}
   m_CullTransparentMesh: 1
---- !u!114 &863473422
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 863473416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9741addc04779b547851f93d61f81bc0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &887739024
 GameObject:
   m_ObjectHideFlags: 0
@@ -13417,9 +13378,8 @@ GameObject:
   - component: {fileID: 905511064}
   - component: {fileID: 905511063}
   - component: {fileID: 905511062}
-  - component: {fileID: 905511065}
   m_Layer: 5
-  m_Name: StartBtn
+  m_Name: GameStartBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13489,9 +13449,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 905511065}
-        m_TargetAssemblyTypeName: GameStartBtn, Assembly-CSharp
-        m_MethodName: StartGame
+      - m_Target: {fileID: 1520545900}
+        m_TargetAssemblyTypeName: FindErrorGameScene, Assembly-CSharp
+        m_MethodName: OnStartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13539,18 +13499,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 905511060}
   m_CullTransparentMesh: 1
---- !u!114 &905511065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 905511060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2bc17ddb56db2c4ea879e2113b9c71e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1000201838
 GameObject:
   m_ObjectHideFlags: 0
@@ -13721,9 +13669,8 @@ GameObject:
   - component: {fileID: 1096507365}
   - component: {fileID: 1096507364}
   - component: {fileID: 1096507363}
-  - component: {fileID: 1096507366}
   m_Layer: 5
-  m_Name: MoveToTownBtn
+  m_Name: GameExitBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13793,9 +13740,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1096507366}
-        m_TargetAssemblyTypeName: MoveToTownBtn, Assembly-CSharp
-        m_MethodName: MoveToTown
+      - m_Target: {fileID: 1520545900}
+        m_TargetAssemblyTypeName: FindErrorGameScene, Assembly-CSharp
+        m_MethodName: OnExitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13843,18 +13790,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1096507361}
   m_CullTransparentMesh: 1
---- !u!114 &1096507366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1096507361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcdc4ed8c5db6a04983183d6d25f53b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1182959763
 GameObject:
   m_ObjectHideFlags: 0
@@ -14109,9 +14044,8 @@ GameObject:
   - component: {fileID: 1309793107}
   - component: {fileID: 1309793106}
   - component: {fileID: 1309793105}
-  - component: {fileID: 1309793108}
   m_Layer: 5
-  m_Name: MoveToTownBtn
+  m_Name: GameExitBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14181,9 +14115,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1309793108}
-        m_TargetAssemblyTypeName: MoveToTownBtn, Assembly-CSharp
-        m_MethodName: MoveToTown
+      - m_Target: {fileID: 1520545900}
+        m_TargetAssemblyTypeName: FindErrorGameScene, Assembly-CSharp
+        m_MethodName: OnExitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14231,18 +14165,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1309793103}
   m_CullTransparentMesh: 1
---- !u!114 &1309793108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1309793103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcdc4ed8c5db6a04983183d6d25f53b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1346166372
 GameObject:
   m_ObjectHideFlags: 0
@@ -14447,16 +14369,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isAbleToTalk: 0
   npcPanel: []
-  StartPanel: {fileID: 1618149458}
-  EndPanel: {fileID: 2108830606}
-  DescriptionPanel: {fileID: 1202510083}
-  score: 0
-  flappyStartPanel: {fileID: 0}
-  flappyEndPanel: {fileID: 0}
   errorCodes:
   - {fileID: 918556644213153056, guid: 3ce0fbbf772d6d247ac7ebf738b4f9e4, type: 3}
   - {fileID: 2279134399904643155, guid: 983dda6fc280a9a448b119cfba24b5d2, type: 3}
   - {fileID: 6693758563444121184, guid: ae06b56977ffdea4bb8c4edb6903cb53, type: 3}
+  StartPanel: {fileID: 1618149458}
+  EndPanel: {fileID: 2108830606}
+  DescriptionPanel: {fileID: 1202510083}
+  score: 0
   currentTime: 0
   routine: 1.5
   routineTime: 0
@@ -14648,7 +14568,7 @@ GameObject:
   - component: {fileID: 1641062550}
   - component: {fileID: 1641062549}
   m_Layer: 5
-  m_Name: HighScoreTxt
+  m_Name: BextScoreTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15325,10 +15245,10 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1593427021}
+  - {fileID: 1520545899}
   - {fileID: 129141740}
   - {fileID: 691311358}
   - {fileID: 315807688}
   - {fileID: 889834794}
   - {fileID: 669937665}
-  - {fileID: 1520545899}
   - {fileID: 480666546}

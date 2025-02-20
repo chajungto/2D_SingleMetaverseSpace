@@ -1,10 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class FlappyBirdGameScene : SceneBase
 {
+    public Bird bird;
+
+    public GameObject flappyStartPanel;
+
+    public GameObject flappyEndPanel;
+
     public float playTime;
  
     public Text playTimeTxt;
@@ -13,17 +20,12 @@ public class FlappyBirdGameScene : SceneBase
 
     public Text bestPlayTimeTxt;
 
-    void Start()
+    protected override void Start()
     {
         Time.timeScale = 0f;
         InitScene();
         flappyStartPanel.SetActive(true);
         flappyEndPanel.SetActive(false);
-    }
-
-    void InitScene()
-    {
-        GameManager.Instance.currentScene = this;
     }
 
     private void Update()
@@ -43,5 +45,29 @@ public class FlappyBirdGameScene : SceneBase
             }
         }
         bestPlayTimeTxt.text = string.Format("{0:N2}", PlayerPrefs.GetFloat("BestPlayTime"));
+
+        if(bird.isDead)
+        {
+            flappyEndPanel.SetActive(true);
+            Time.timeScale = 0f;
+        }
+    }
+
+    //게임 시작
+    public void OnStartGame()
+    {
+        flappyStartPanel.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
+    //게임 다시하기
+    public void OnRetryGame()
+    {
+        SceneManager.LoadScene("FlappyBirdGameScene");
+    }
+
+    public void OnExitGame()
+    {
+        SceneManager.LoadScene("Mainscene");
     }
 }

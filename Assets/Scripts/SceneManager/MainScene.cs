@@ -4,14 +4,9 @@ using UnityEngine;
 
 public class MainScene : SceneBase
 {
-    void Start()
+    protected override void Start()
     {
         Time.timeScale = 1.0f;
         InitScene();
-    }
-
-    void InitScene()
-    {
-        GameManager.Instance.currentScene = this;
     }
 }
