@@ -90012,6 +90012,10 @@ PrefabInstance:
       value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 7978762624699444342, guid: 269444cbef51ba94cbf521223a49b2d4, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 519420028}
+    - target: {fileID: 7978762624699444342, guid: 269444cbef51ba94cbf521223a49b2d4, type: 3}
       propertyPath: npcPanel.Array.size
       value: 8
       objectReference: {fileID: 0}

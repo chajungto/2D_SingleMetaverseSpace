@@ -30,6 +30,8 @@ public class Player : MonoBehaviour
 
     public Collider2D npcCollider;          //감지될 NPC 콜라이더
 
+    public GameObject playerCamera;         //카메라
+
     public bool isLeft = true;              //왼쪽으로 이동중인지의 여부
     public bool isAbleToMove = true;        //움직임이 가능한지의 여부
     public bool isAbleToTalk = false;       //대화 가능 여부
@@ -37,6 +39,9 @@ public class Player : MonoBehaviour
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
+        transform.position = new Vector3(PlayerPrefs.GetFloat("RecentxPos"), PlayerPrefs.GetFloat("RecentyPos"), this.transform.position.z);
+        playerCamera.transform.position = new Vector3(PlayerPrefs.GetFloat("RecentxPos"), PlayerPrefs.GetFloat("RecentyPos"), playerCamera.transform.position.z);
+        isLeft = PlayerPrefs.GetInt("RecentIsLeft") == 1 ? true : false;
     }
 
     //플레이어 이름 정하기
@@ -183,5 +188,12 @@ public class Player : MonoBehaviour
             scriptPanel.SetActive(false);
             isAbleToMove = true;
         }
+    }
+    void OnDisable()
+    {
+        PlayerPrefs.SetFloat("RecentxPos", transform.position.x);
+        PlayerPrefs.SetFloat("RecentyPos", transform.position.y);
+
+        PlayerPrefs.SetInt("RecentIsLeft", isLeft ? 1 : 0);
     }
 }

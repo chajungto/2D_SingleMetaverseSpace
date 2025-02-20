@@ -7,6 +7,8 @@ public class StartScene : SceneBase
     protected override void Start()
     {
         InitScene();
+        PlayerPrefs.SetFloat("RecentxPos", 0f);
+        PlayerPrefs.SetFloat("RecentyPos", 0f);
     }
 
 }
