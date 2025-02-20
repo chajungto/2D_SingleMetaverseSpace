@@ -114,10 +114,6 @@ public class Player : MonoBehaviour
         {
             inputVec = value.Get<Vector2>();
         }
-        else
-        {
-            inputVec = new Vector2(0, 0);
-        }
     }
 
     //¥Î»≠
@@ -133,7 +129,8 @@ public class Player : MonoBehaviour
                 {
                     scriptPanel = npcController.scriptPanel;
                     scriptPanel.SetActive(true);
-                    isAbleToMove = false;
+                    isAbleToMove = false; 
+                    inputVec = Vector2.zero;
                 }
             }
             catch { }
