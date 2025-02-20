@@ -23,10 +23,13 @@ public class NPCController : MonoBehaviour
     [SerializeField]                    //대화가 나올 UI 패널
     public GameObject scriptPanel;
 
-    
+    [SerializeField]
+    private Player player;
+
     void Start()
     {
         nameTag.GetComponent<SpriteRenderer>().sprite = npcInfo.NpcSprtie;
+        player = FindObjectOfType<Player>();
     }
 
 
@@ -35,7 +38,6 @@ public class NPCController : MonoBehaviour
         playerCollider = Physics2D.OverlapCircle(transform.position, radius, layer);
         if(playerCollider != null)
         {
-            Debug.Log("플레이어 감지");
             tryTalkPanel.SetActive(true);
         }
         else
@@ -45,7 +47,7 @@ public class NPCController : MonoBehaviour
 
         if(tryTalkPanel.activeSelf)
         {
-           GameManager.Instance.currentScene.isAbleToTalk = true;
+            player.isAbleToTalk = true;
         }
 
     }

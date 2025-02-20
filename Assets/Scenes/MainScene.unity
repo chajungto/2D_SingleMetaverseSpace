@@ -6163,16 +6163,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68dee16d4514cd142983b0e9251caf15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAbleToTalk: 0
-  npcPanel:
-  - {fileID: 2759784528911976805}
-  - {fileID: 1903997926311737193}
-  - {fileID: 6875449967836001142}
-  - {fileID: 3220989220684987402}
-  - {fileID: 7588709477835566676}
-  - {fileID: 4173956282069525837}
-  - {fileID: 5112255065108232261}
-  - {fileID: 6914039139703657799}
 --- !u!4 &1211763365
 Transform:
   m_ObjectHideFlags: 0
@@ -90021,6 +90011,42 @@ PrefabInstance:
       propertyPath: layer.m_Bits
       value: 64
       objectReference: {fileID: 0}
+    - target: {fileID: 7978762624699444342, guid: 269444cbef51ba94cbf521223a49b2d4, type: 3}
+      propertyPath: npcPanel.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7978762624699444342, guid: 269444cbef51ba94cbf521223a49b2d4, type: 3}
+      propertyPath: npcPanel.Array.data[0]
+      value: 
+      objectReference: {fileID: 2759784528911976805}
+    - target: {fileID: 7978762624699444342, guid: 269444cbef51ba94cbf521223a49b2d4, type: 3}
+      propertyPath: npcPanel.Array.data[1]
+      value: 
+      objectReference: {fileID: 1903997926311737193}
+    - target: {fileID: 7978762624699444342, guid: 269444cbef51ba94cbf521223a49b2d4, type: 3}
+      propertyPath: npcPanel.Array.data[2]
+      value: 
+      objectReference: {fileID: 6875449967836001142}
+    - target: {fileID: 7978762624699444342, guid: 269444cbef51ba94cbf521223a49b2d4, type: 3}
+      propertyPath: npcPanel.Array.data[3]
+      value: 
+      objectReference: {fileID: 3220989220684987402}
+    - target: {fileID: 7978762624699444342, guid: 269444cbef51ba94cbf521223a49b2d4, type: 3}
+      propertyPath: npcPanel.Array.data[4]
+      value: 
+      objectReference: {fileID: 7588709477835566676}
+    - target: {fileID: 7978762624699444342, guid: 269444cbef51ba94cbf521223a49b2d4, type: 3}
+      propertyPath: npcPanel.Array.data[5]
+      value: 
+      objectReference: {fileID: 4173956282069525837}
+    - target: {fileID: 7978762624699444342, guid: 269444cbef51ba94cbf521223a49b2d4, type: 3}
+      propertyPath: npcPanel.Array.data[6]
+      value: 
+      objectReference: {fileID: 5112255065108232261}
+    - target: {fileID: 7978762624699444342, guid: 269444cbef51ba94cbf521223a49b2d4, type: 3}
+      propertyPath: npcPanel.Array.data[7]
+      value: 
+      objectReference: {fileID: 6914039139703657799}
     - target: {fileID: 8055448635386495309, guid: 269444cbef51ba94cbf521223a49b2d4, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -91016,10 +91042,10 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
+  - {fileID: 1211763365}
   - {fileID: 3522274622816913487}
   - {fileID: 1279789399}
   - {fileID: 891236687}
   - {fileID: 91049093}
   - {fileID: 822320232}
-  - {fileID: 1211763365}
   - {fileID: 65066752}
